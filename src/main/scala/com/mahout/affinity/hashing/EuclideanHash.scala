@@ -8,9 +8,10 @@ class EuclideanHash(dimensions: Int, private var w: Int) extends HashFunction {
 
   private var randomProjection: DataVector = new DataVector(dimensions)
 
+  val rand = new Random()
   private var offset: Int = rand.nextInt(w)
 
-  val rand = new Random()
+  
 
   for (d <- 0 until dimensions) {
     val `val` = rand.nextGaussian()

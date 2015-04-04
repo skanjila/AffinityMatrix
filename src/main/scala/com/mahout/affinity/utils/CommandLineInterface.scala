@@ -199,7 +199,7 @@ class CommandLineInterface(args: Array[String]) {
   }
 
   private def getValue(option: String, defaultValue: String): String = {
-    var index = -1
+    var index: Integer = -1
     var value: String = null
     for (i <- 0 until arguments.length if arguments(i).equalsIgnoreCase(option)) {
       index = i
